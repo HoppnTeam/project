@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased text-gray-900 dark:text-white transition-colors duration-200;
+    font-family: Helvetica, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Modern Card Styles */
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-[1.02];
+  }
+
+  /* Button Styles */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-semibold transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-gold text-black hover:bg-opacity-90;
+  }
+
+  .btn-secondary {
+    @apply bg-black text-white hover:bg-opacity-90;
+  }
+
+  /* Section Styles */
+  .section {
+    @apply py-12;
+  }
+
+  .section-header {
+    @apply flex items-center space-x-2 mb-8;
+  }
+
+  /* Gradient Backgrounds */
+  .gradient-overlay {
+    @apply bg-gradient-to-r from-black/80 to-black/40;
+  }
+
+  /* Animation Classes */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  .hover-glow {
+    @apply transition-shadow duration-300 hover:shadow-lg hover:shadow-gold/20;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100 dark:bg-gray-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold/50 rounded-full hover:bg-gold;
+  }
+}
+
+/* Dark Mode Optimizations */
+.dark {
+  .card {
+    @apply border border-gray-700;
+  }
+
+  .btn-secondary {
+    @apply bg-gray-800 hover:bg-gray-700;
+  }
+}
+
+/* Category-specific Accent Colors */
+.category-news-politics { @apply border-l-4 border-news-politics; }
+.category-entertainment { @apply border-l-4 border-entertainment; }
+.category-cultures { @apply border-l-4 border-cultures; }
+.category-sports { @apply border-l-4 border-sports; }
+.category-technology { @apply border-l-4 border-technology; }
+.category-business { @apply border-l-4 border-business; }
+.category-travel { @apply border-l-4 border-travel; }
+.category-youth { @apply border-l-4 border-youth; }

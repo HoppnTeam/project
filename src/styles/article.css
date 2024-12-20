@@ -1,0 +1,46 @@
+/* Article Layout */
+.article-container {
+  @apply prose prose-lg mx-auto;
+  font-family: Helvetica, sans-serif;
+}
+
+.article-container p {
+  @apply mb-6 leading-relaxed;
+}
+
+.article-container blockquote {
+  @apply my-8 p-6 border-l-4 border-gold bg-gray-50 italic;
+}
+
+.article-container figure {
+  @apply my-8;
+}
+
+.article-container figure img {
+  @apply w-full rounded-lg;
+}
+
+.article-container figure figcaption {
+  @apply text-center text-gray-600 mt-2;
+}
+
+.article-container .gallery {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-8;
+}
+
+.article-container .video-embed {
+  @apply relative pb-[56.25%] h-0 overflow-hidden max-w-full my-8;
+}
+
+.article-container .video-embed iframe {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+/* Dark mode adjustments */
+.dark .article-container {
+  @apply prose-invert;
+}
+
+.dark .article-container blockquote {
+  @apply bg-gray-800;
+}
